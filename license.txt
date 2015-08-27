@@ -1,0 +1,5 @@
+Copyright Jeremy Laviole. Inria, Bordeaux University.
+Author : Jeremy Laviole.
+
+The license is LGPL v3 included with this file.
+Questions ask to : jeremy.laviole@inria.fr

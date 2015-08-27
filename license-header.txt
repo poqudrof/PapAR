@@ -1,0 +1,12 @@
+<#if licenseFirst??>
+${licenseFirst}
+</#if>
+${licensePrefix} Copyright Inria and Bordeaux University.
+${licensePrefix} Author Jeremy Laviole. jeremy.laviole@inria.fr
+${licensePrefix} PapAR project is the open-source version of the
+${licensePrefix} PapARt project. License is LGPLv3, distributed with the sources.
+${licensePrefix} This project can also distributed with standard commercial
+${licensePrefix} licence for closed-sources projects.
+<#if licenseLast??>
+${licenseLast}
+</#if>
