@@ -3,7 +3,6 @@ import fr.inria.papart.procam.*;
 import fr.inria.papart.procam.camera.*;
 import org.bytedeco.javacpp.*;
 import org.reflections.*;
-import TUIO.*;
 import toxi.geom.*;
 
 import processing.video.*;
@@ -26,8 +25,8 @@ public void setup() {
     }
     
 
-     camera = CameraFactory.createCamera(Camera.Type.OPEN_KINECT, "0");    
-     // camera = CameraFactory.createCamera(Camera.Type.OPENCV, "0");    
+    // camera = CameraFactory.createCamera(Camera.Type.OPEN_KINECT, "0");    
+    camera = CameraFactory.createCamera(Camera.Type.OPENCV, "0");    
     // camera = CameraFactory.createCamera(Camera.Type.PROCESSING, "/dev/video1");
     // camera = CameraFactory.createCamera(Camera.Type.FLY_CAPTURE, 0);
 
@@ -46,5 +45,3 @@ void draw() {
 	image(im, 0, 0, width, height);
 
 }
-
-
