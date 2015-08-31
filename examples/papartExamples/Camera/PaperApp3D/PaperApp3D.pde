@@ -2,7 +2,6 @@
 import fr.inria.papart.procam.*;
 import org.bytedeco.javacpp.*;
 import org.reflections.*;
-import TUIO.*;
 import toxi.geom.*;
 
 
@@ -18,4 +17,3 @@ void setup(){
 
 void draw(){
 }
-

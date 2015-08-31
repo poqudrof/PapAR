@@ -7,7 +7,6 @@ import toxi.geom.*;
 
 import processing.video.*;
 
-boolean useProjector = false;
 Papart papart;
 
 public void setup() {
