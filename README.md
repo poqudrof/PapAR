@@ -1,7 +1,11 @@
 # PapAR
 Augmented reality for Processing
 
-First version in progress.
+Reference-style: 
+![PapAR screenshot][screenshot]
+
+
+
 
 ## How to use. 
 
@@ -14,3 +18,7 @@ Have a look at the [Quick start guide](https://github.com/poqudrof/PapAR/wiki/Qu
 * Large camera support: Processing + OpenCV + FlyCapture + OpenKinect. 
 * Open source License and closed-source license.
 * Tested on  **Linux**, and previous versions on Windows and OSX. We aim also ARM Linux (Rasperry PI) and Android. 
+
+
+
+[screenshot]: https://raw.githubusercontent.com/poqudrof/PapAR/master/data/papar.png "PapAR screenshot"
