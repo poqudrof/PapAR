@@ -1,11 +1,7 @@
 # PapAR
 Augmented reality for Processing
 
-Reference-style: 
 ![PapAR screenshot][screenshot]
-
-
-
 
 ## How to use. 
 
@@ -21,4 +17,4 @@ Have a look at the [Quick start guide](https://github.com/poqudrof/PapAR/wiki/Qu
 
 
 
-[screenshot]: https://raw.githubusercontent.com/poqudrof/PapAR/master/data/papar.png "PapAR screenshot"
+[screenshot]: https://raw.githubusercontent.com/poqudrof/PapAR/master/data/papar2.png "PapAR screenshot"
