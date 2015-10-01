@@ -49,7 +49,7 @@ public class CamImageGray extends CamImage {
 
         Texture tex = ((PGraphicsOpenGL) parent.g).getTexture(this);
         ByteBuffer buffer = iplImage.getByteBuffer();
-        
+
 //         Utils.byteBufferBRGtoARGB(bgrBuffer, argbBuffer);
         tex.copyBufferFromSource(null, buffer, width, height);
         buffer.rewind();

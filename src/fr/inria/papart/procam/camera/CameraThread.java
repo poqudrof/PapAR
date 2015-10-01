@@ -40,13 +40,16 @@ class CameraThread extends Thread {
     public CameraThread(Camera camera) {
         this.camera = camera;
         stop = false;
-
-        // Thread version... No bonus whatsoever for now.
-        initThreadPool();
     }
 
     private final int nbThreads = 4;
-    private ExecutorService threadPool;
+    private ExecutorService threadPool = null;
+
+    private void tryInitThreadPool() {
+        if (threadPool == null) {
+            this.initThreadPool();
+        }
+    }
 
     private void initThreadPool() {
         threadPool = Executors.newFixedThreadPool(nbThreads);
@@ -96,6 +99,8 @@ class CameraThread extends Thread {
     }
 
     protected void updateParallel() {
+        tryInitThreadPool();
+
         ArrayList<FutureTask<DepthPixelTask>> tasks = new ArrayList<>();
         for (MarkerBoard sheet : camera.getTrackedSheets()) {
             DepthPixelTask depthPixelTask = new DepthPixelTask(sheet);
@@ -164,7 +169,7 @@ class CameraThread extends Thread {
 //            cvConvertScale(image, grayImage, 255 / image.highValue(), 0);
 ////            image = tempImage;
 //        } else if (channels > 1) {
-            cvCvtColor(image, grayImage, channels > 3 ? CV_RGBA2GRAY : CV_BGR2GRAY);
+        cvCvtColor(image, grayImage, channels > 3 ? CV_RGBA2GRAY : CV_BGR2GRAY);
 //            image = tempImage;
 //        }
         /*
@@ -193,6 +198,11 @@ class CameraThread extends Thread {
 
     public void setCompute(boolean compute) {
         this.compute = compute;
+        
+        if(compute == false && this.threadPool != null){
+            this.threadPool.shutdown();
+            this.threadPool = null;
+        }
     }
 
     public void stopThread() {

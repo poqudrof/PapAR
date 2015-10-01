@@ -64,9 +64,13 @@ public class CaptureIpl extends Capture implements PConstants {
             byteBuffer.rewind();
             imageBuffer.rewind();
 
-
+            available = false;
+            newFrame = true;
+        
+            // Not working...
             if (useBufferSink) { // The native buffer from gstreamer is copied to the buffer sink.
                 if (natBuffer == null) {
+                    System.out.println("No nat Buffer.");
                     return;
                 }
 
@@ -78,6 +82,7 @@ public class CaptureIpl extends Capture implements PConstants {
                 if (bufferSink == null) {
                     Object cache = parent.g.getCache(this);
                     if (cache == null) {
+                        System.out.println("No cache.");
                         return;
                     }
                     setBufferSink(cache);
@@ -96,7 +101,9 @@ public class CaptureIpl extends Capture implements PConstants {
 
                 natBuffer = null;
             } else { // The pixels just read from gstreamer are copied to the pixels array.
-                if (copyPixels == null) {
+                
+            if (copyPixels == null) {
+                    System.out.println("No copy Pixels.");
                     return;
                 }
 
@@ -112,11 +119,10 @@ public class CaptureIpl extends Capture implements PConstants {
             }
 
         } catch (Exception e) {
-            System.out.println("Error");
+            System.out.println("Error " + e);
+            e.printStackTrace();
         }
 
-        available = false;
-        newFrame = true;
     }
     
     @Override
