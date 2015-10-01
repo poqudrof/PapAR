@@ -5,14 +5,15 @@ RadioButton screenChooser,  cameraType ;
 Button startCameraButton, saveCameraAsButton, saveDefaultCameraButton;
 Button initButton, saveScreenAsButton, saveDefaultScreenButton;
 
-PFont myFont = createFont("arial",20);
+
 ControlFont cFont;
 CColor cColor;
 CColor cColorToggle;
 
 PImage testCameraImg;
-
+  PFont myFont;
 void initUI(){
+   myFont = createFont("arial",20);
     skatolo = new Skatolo(this);
 
    // skatolo.setColorForeground(color(200,0));

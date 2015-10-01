@@ -551,9 +551,6 @@ public class PaperScreen {
         currentGraphics.removeCache(image);
     }
 
-    public float getPixelScale() {
-        return currentGraphics.getPixelScale();
-    }
 
 //    public void beginDraw() {
 //        currentGraphics.beginDraw();
