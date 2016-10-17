@@ -5,9 +5,10 @@ PapARt is a larger processing library
 for Augmented Reality. The ease of use is the same. It works with 
 many camera, and depth cameras. 
 
-Please switch to PapARt for your code and issues ! 
-# [PapARt](https://github.com/poqudrof/PapARt) 
+### Please switch to PapARt for your code and issues ! 
 
+Library: [PapARt](https://github.com/poqudrof/PapARt)
+Examples: [PapARt examples](https://github.com/poqudrof/Papart-examples)
 
 ![PapAR screenshot][screenshot]
 
